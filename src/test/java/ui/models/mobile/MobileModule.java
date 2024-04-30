@@ -45,7 +45,7 @@ WebDriver driver;
 			for (WebElement option : dropdownOptions) {
 				if (option.getText().equals(requiredOption) || numberOfOptions >= 7) {
 					isFound = true;
-					sendEmail("gasadraza@gmail.com", "Option is Available", "The required option is now available in the dropdown.");
+					sendEmail("Email on which you want to send an email", "Option is Available", "The required option is now available in the dropdown.");
 					break;
 				}
 			}
@@ -56,7 +56,7 @@ WebDriver driver;
 	}
 
 	private void sendEmail(String to, String subject, String text) throws MessagingException {
-		String from = "gasadraza@gmail.com";
+		String from = "Email on which you want to send an email";
 		String host = "smtp.gmail.com";
 
 		Properties properties = System.getProperties();
@@ -67,7 +67,7 @@ WebDriver driver;
 
 		Session session = Session.getDefaultInstance(properties, new Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("heloasadraza@gmail.com", "hwfv fneq lyij lpnh");
+				return new PasswordAuthentication("Email from where you want to send an email", "AppPassoword from Gmail account/  Create an password that should be 16 digits paste it here");
 			}
 		});
 
